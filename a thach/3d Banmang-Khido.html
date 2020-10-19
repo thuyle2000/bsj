@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BẢN MẠNG</title>
+    <h2>MẦU SẮC - KHÍ ĐỘ BẢN MẠNG </h2>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #CCC;
+            margin: 80px;
+            perspective: 400px;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(-100px);
+            transition: transform 2s;
+        }
+
+        .cube.show-ThạchS {
+            transform: translateZ(-100px) rotateY(0deg);
+        }
+
+        .cube.show-ThúyM {
+            transform: translateZ(-100px) rotateY(-90deg);
+        }
+
+        .cube.show-AnhV {
+            transform: translateZ(-100px) rotateY(-180deg);
+        }
+
+        .cube.show-KhánhS {
+            transform: translateZ(-100px) rotateY(90deg);
+        }
+
+        .cube.show-QuangV {
+            transform: translateZ(-100px) rotateX(-90deg);
+        }
+
+        .cube.show-BìnhS {
+            transform: translateZ(-100px) rotateX(90deg);
+        }
+
+        .cube__face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            line-height: 200px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        .cube__face--ThạchS {
+            background: yellow;
+        }
+
+        .cube__face--ThúyM {
+            background: yellow;
+        }
+
+        .cube__face--AnhV {
+            background: yellow;
+        }
+
+        .cube__face--KhánhS {
+            background: green;
+        }
+
+        .cube__face--QuangV{
+            background: red;
+        }
+
+        .cube__face--BìnhS {
+            background: darkolivegreen;
+        }
+
+        .cube__face--ThạchS {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube__face--ThúyM {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube__face--AnhV {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube__face--KhánhS {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube__face--QuangV {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube__face--BìnhS {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+   
+    <hr>
+    <div class="scene">
+        <div class="cube">
+            <div class="cube__face cube__face--ThạchS">ThạchS</div>
+            <div class="cube__face cube__face--ThúyM">ThúyM</div>
+            <div class="cube__face cube__face--AnhV">AnhV</div>
+            <div class="cube__face cube__face--KhánhS">KhánhS</div>
+            <div class="cube__face cube__face--QuangV">QuangV</div>
+            <div class="cube__face cube__face--BìnhS">BìnhS</div>
+        </div>
+    </div>
+    <p class="radio-group">
+        <label>
+            <input type="radio" name="rotate-cube-side" value="ThạchS" checked />Thạch-1960 
+        </label>
+        <label>
+            <input type="radio" name="rotate-cube-side" value="ThúyM" />Thúy-1976
+        </label>
+        <label>
+            <input type="radio" name="rotate-cube-side" value="AnhV" />Anh-1998
+        </label>
+        <label>
+            <input type="radio" name="rotate-cube-side" value="KhánhS" />Khánh-2003
+        </label>
+        <label>
+            <input type="radio" name="rotate-cube-side" value="QuangV" /> Quang-2004
+        </label>
+        <label>
+            <input type="radio" name="rotate-cube-side" value="BìnhS" /> Bình-2008
+        </label>
+    </p>
+
+
+    <script>
+        var cube = document.querySelector('.cube');
+        var radioGroup = document.querySelector('.radio-group');
+        var currentClass = '';
+
+        function changeSide() {
+            var checkedRadio = radioGroup.querySelector(':checked');
+            var showClass = 'show-' + checkedRadio.value;
+            if (currentClass) {
+                cube.classList.remove(currentClass);
+            }
+            cube.classList.add(showClass);
+            currentClass = showClass;
+        }
+        // set initial side
+        changeSide();
+
+        radioGroup.addEventListener('change', changeSide);
+    </script>
+</body>
+
+</html>

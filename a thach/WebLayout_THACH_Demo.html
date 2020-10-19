@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tao Menu</title>
+    <!-- Liên kết với thư viện css; jquery và bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js">
+    </script>
+    <script src="js/bootstrap.min.js">
+    </script>
+
+    <style>
+        body {
+            font-family: arial, tahoma;
+            font-size: 12px;
+        }
+
+        #main {
+            width: 1000px;
+            padding: 0;
+            margin: auto;
+        }
+
+        #head {
+            height: 100px;
+            background-color: white;
+            border: 1px solist #CDCDCD;
+            margin-bottom: 5px;
+        }
+
+        #head-link {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solist red;
+            margin-bottom: 5px;
+            clear: both;
+        }
+
+        #left {
+            width: 200px;
+            min-height: 400px;
+            border: 1px solist #CDCDCD;
+            float: left;
+            background-color: #004C00;
+            margin-bottom: 5px;
+        }
+
+        #content {
+            width: 600px;
+            min-height: 400px;
+            border: 1px solist red;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            background-color: yellow;
+        }
+
+        #right {
+            width: 190px;
+            min-height: 400px;
+            border: 1px solis red;
+            float: right;
+
+            background-color: green;
+        }
+
+        #footer {
+            height: 50px;
+            clear: both;
+            border: 1px solist rgb(205, 205, 205);
+            background-color: rgb(251, 255, 248);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="head">
+            <nav class="navbar navbar-default">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <img src="images/HANGSO LUAN HOI.jpg">
+                    </div>
+
+                    <h3 style="color: red;">
+                        HẰNG SỐ LUÂN HỒI VÀ THÁI CỰC HOA GIÁP
+                    </h3>
+                    <h4><i>
+                            The best sell book since 2008</i>
+                    </h4>
+                    <navlayout>
+                        <ul id="navlayout">
+                            <li><a href='PRACTICAL EXAMINATION BNGW-set1.html'>Home</a></li>
+                            <li><a href='#'>Contract us</a></li>
+                            <li><a href='#'>About us</a></li>
+                            <li><a href='#'>FQAs</a></li>
+                            <li><a href='#'>Ung dung</a></li>
+                            <li><a href='#'>Lich phong thuy</a></li>
+                            <li><a href='#'>Du bao ca nhan</a></li>
+                            <li><a href='#'>Dinh vi phong thuy</a></li>
+                            <li><a href='#'>Noi dung</a></li>
+                        </ul>
+                    </navlayout>
+
+                    <table>
+                        <tr style="text-align: left;">
+                            <td>
+                                <b>
+                                    <h4> Books are now in store!</h4>
+                                </b>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown" class="dropdown-toggle">Home<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="TCHG-Home.html"></a>Sách HSLH & TCHG</li>
+                                <li><a href=""></a>Bảng Thái Cực Hoa giáp</li>
+                                <li><a href=""></a>Lịch Phong Thủy</li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown" class="dropdown-toggle">Product<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""></a>Dụng cụ định vị phương hướng</li>
+                                <li><a href=""></a>Định vị phong thủy</li>
+                                <li><a href=""></a>Tư vấn tổ chức nhóm</li>
+                                <li><a href=""></a>Bàn tay trái tìm bản mạng</li>
+                                <li><a href=""></a>Tranh định vị phong thủy</li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown" class="dropdown-toggle">Events<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="TCHG-Home.html"></a>New Websites</li>
+                                <li><a href=""></a>New registers</li>
+                                <li><a href=""></a>New Events</li>
+                            </ul>
+                        </li>
+                </div>
+            </nav>
+        </div>
+        <div id="head-link"></div>
+
+        <div id="left" style="color: red;">
+            <form action="" method="GET" id="formDK" name="formDK">
+                <label for="">Nhap email</label>
+                <br><br>
+                <input type="email" name="txtMail" id="txtMail" required value="" placeholder="Nhập Email">
+                <br>
+                <label for="">Nhap mat khau</label>
+                <input type="password" name="txtPass" id="txtPass" required value="" placeholder="Nhập mật khẩu">
+                <br>
+                <label for="">Nhap ngay sinh</label>
+                <br>
+                <input type="date" name="txtNS" id="txtNS" required value="" placeholder="Nhập ngày sinh">
+                <br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                <textarea name="txtTT" id="txtTT" cols="30" rows="10">...</textarea>
+
+            </form>
+            <script>
+
+                document.getElementById("formDK").onsubmit = function () {
+                    var ns = document.getElementById("txtNS").value;
+                    var dateNS = new Date(ns);
+                    var namsinh = dateNS.getFullYear();
+                    var today = new Date();
+                    var namnay = today.getFullYear();
+                    var tuoi = namnay - namsinh;
+                    if (tuoi < 18) {
+                        alert("Sorry, Bạn chưa đủ 18 tuổi");
+                        return false;
+                    }
+                    var mail = document.getElementById("txtMail").value;
+                    var password = document.getElementById("txtPass").value;
+                    var a = [];
+                    a.push("Email:" + mail);
+                    a.push("Password:" + password);
+                    a.push("Tuoi:" + tuoi);
+                    document.getElementById("txtTT").value = a.join("\n");
+                    alert(a.join("\n"));
+                    var newTab = window.open();
+                    newTab.document.write(a.join("<br>"));
+                    return false;
+                }     
+            </script>
+        </div>
+
+        <div id="content">
+            <style>
+                #navlayout {
+                    width: 80%;
+                    float: left;
+                    margin: 0 0 3em 0;
+                    padding: 0;
+                    list-style: none;
+                    background-color: #f2f2f2;
+                    border-bottom: 1px solid #ccc;
+                    border-top: 1px solid #ccc
+                }
+
+                #navlayout li {
+                    float: left;
+                }
+
+                #navlayout li a {
+                    display: block;
+                    padding: 5px 6px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: red;
+                    border-right: 2px solid rgb(27, 4, 68);
+                }
+
+                #navlayout li a:hover {
+                    color: rgb(255, 255, 255);
+                }
+
+                .hinh {
+                    width: 70%;
+                    margin: auto;
+                    text-align: center;
+                }
+
+                .hinh img {
+                    width: 80%;
+                }
+            </style>
+
+            <table class="hinh" style="align-self: auto">
+                <style>
+                    img {
+                        width: 100%;
+                        height: 110px;
+                        padding: 5px 0px;
+                    }
+                </style>
+                <tr>
+                    <td>Dụng cụ định vị phương hướng</td>
+                    <td>Quy tắc bàn tay tìm bản mạng</td>
+                    <td>Định vị phong thủy</td>
+                    <td>Hằng số luân hồi & Thái cực hoa giáp</td>
+                    <td>Tổ chức lao động nhóm</td>
+                </tr>
+                <tr>
+                    <td><img src="images/TCHG_DungcuDinhvi.png"></td>
+                    <td><img src="images/TCHG_Quytactimbanmang_Go.png"></td>
+                    <td><img src="images/TCHG_DinhviPhongthuy.png"></td>
+                    <td><img src="images/thai cuc hoa giap.jpg"></td>
+                    <td><img src="images/TCHG_Tochuclaodongnhom.png"></td>
+                </tr>
+
+                <tr>
+                    <td> Dụng cụ định vị phương hướng Recipes</td>
+                    <td> Quy tắc bàn tay tìm bản mạng Recipes</td>
+                    <td> Định vị phong thủy Recipes</td>
+                    <td> Hằng số luân hồi & Thái cực hoa giáp Recipes</td>
+                    <td> Tổ chức lao động nhóm Recipes</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="right" style="color: red; text-align: right;>
+            <form action=" method="get" id="formHD" name="formHD">
+
+            <label for="">TÊN SẢN PHẨM</label>
+            <br><br>
+            <select id="cbSP" name="cbSP">
+                <option value="100.000.000">Nhà Tiên tri</option>
+                <option value="50.000.000">Bàn tay bản mạng</option>
+                <option value="2.000.000">Định vị phong thủy</option>
+                <option value="500.000">Sách HSLH & TCHG</option>
+                <option value="100.000">Tổ chức LĐ nhóm</option>
+            </select>
+            <br><br>
+            <label for="">Đơn giá:</label>
+            <input type="text" name="txtDG" id="txtDG" readonly>
+            <br><br>
+            <label for="">Số lượng:</label>
+            <input type="number" name="txtSL" id="txtSL" value="1" min="1" max="200" required>
+            <br>
+            <label for="">Thành tiền:</label>
+            <input type="text" name="txtTT" id="txtTT" readonly>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            </form>
+
+            <script>
+                function tinhTien() {
+                    var dg = document.getElementById("txtDG").value;
+                    var sl = document.getElementById("txtSL").value;
+                    dg = parseInt(dg);
+                    sl = parseInt(sl);
+                    var tt = dg * sl;
+                    document.getElementById("txtTT").value = tt;
+                }
+                document.getElementById("formHD").onchange = layDonGia;
+                window.onload = layDonGia;
+                function layDonGia() {
+                    var dg = document.getElementById("cbSP").value;
+                    document.getElementById("txtDG").value = dg;
+                    tinhTien();
+                }
+            </script>
+        </div>
+</body>
+
+</html>

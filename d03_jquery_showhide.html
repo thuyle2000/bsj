@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>JQuery Demo - hide() / show() / toogle()</h2>
+        </div>
+
+        <div>
+            <input type="button" value="Show" class="btn btn-danger" id="btSHOW">
+            <input type="button" value="Hide" class="btn btn-info" id="btHIDE">
+            <input type="button" value="Toggle" class="btn btn-warning" id="btTOG">
+        </div>
+        <div id="main">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum laudantium, tempore accusantium repudiandae ipsum eveniet sunt nulla labore obcaecati cumque unde laborum aspernatur perspiciatis in minima praesentium ab porro eos!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, hic? Totam aliquid, amet mollitia quia itaque cumque corrupti. Assumenda minima deleniti nulla eius consectetur itaque sed dignissimos, natus et recusandae.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, repellendus reprehenderit soluta delectus id debitis fuga sequi veniam quisquam dignissimos, excepturi ratione voluptatum quas ipsum aspernatur culpa amet quae repellat.
+            Laboriosam rerum aspernatur eius reprehenderit nulla totam ab assumenda enim perspiciatis quia deserunt debitis, repellat dolor quibusdam inventore officiis minus quasi? Animi temporibus est unde modi voluptas! Quos, dignissimos magnam.
+            Praesentium rem, doloribus aperiam veniam alias sapiente maxime ex corrupti eos. Debitis, mollitia quas! Molestiae eaque at eum ab necessitatibus. Natus explicabo quos odio placeat similique aut neque nostrum illo!
+            Fugit itaque, sed voluptas iste ipsam hic esse deserunt facere eum nam consequatur reiciendis. Maiores, aliquam quam fugit debitis officiis nemo pariatur nam odit provident? Officiis dolore atque ut ratione?</p>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        //lap trinh cho su kien click button show
+        $("#btSHOW").click(function(){
+            //hien thi noi dung div "main"
+            $("#main").show();
+        });
+
+
+        //lap trinh cho su kien click button hide
+        $("#btHIDE").click(function(){
+            //an hoi dung div "main"
+            $("#main").hide();
+        });
+
+        //lap trinh cho su kien click button toggle
+        $("#btTOG").click(function(){
+            //an hoi dung div "main"
+            $("#main").toggle();
+        });
+
+    });
+    </script>
+</body>
+</html>
